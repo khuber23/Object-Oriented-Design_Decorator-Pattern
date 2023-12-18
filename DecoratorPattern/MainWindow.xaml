@@ -1,0 +1,41 @@
+﻿<Window x:Class="DecoratorPattern.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DecoratorPattern"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="245.6" Width="399.2">
+    <Grid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Orientation="Horizontal">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Label Content="Select Coffee Type:"></Label>
+                <RadioButton x:Name="houseBlend" Content="House Blend" GroupName="Coffee" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" />
+                <RadioButton x:Name="darkRoast" Content="Dark Roast" GroupName="Coffee" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" />
+                <RadioButton x:Name="espresso" Content="Espresso" GroupName="Coffee" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" />
+                <RadioButton x:Name="decaf" Content="Decaf" GroupName="Coffee" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" />
+                <Button x:Name="orderButton" Content="Order" Height="20" Margin="0, 5, 0, 0" Width="80" Click="OrderButton_Click"></Button>
+            </StackPanel>
+            <StackPanel Margin="20, 0, 0, 0">
+                <Label Content="Select Condiments:"></Label>
+                <CheckBox x:Name="milkCondiment" Content="Milk" Margin="5" />
+                <CheckBox x:Name="mochaCondiment" Content="Mocha" Margin="5"/>
+                <CheckBox x:Name="soyCondiment" Content="Soy" Margin="5" ></CheckBox>
+                <CheckBox x:Name="whipCondiment" Content="Whip" Margin="5"></CheckBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Orientation="Horizontal">
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                <Label Content="Order Description: "></Label>
+                <Label Content="Price:"></Label>
+            </StackPanel>
+            <StackPanel Width="250">
+                <Label x:Name="descriptionLabel" Content=""></Label>
+                <Label x:Name="priceLabel" Content=""></Label>
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
